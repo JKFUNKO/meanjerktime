@@ -1,0 +1,21 @@
+{
+  "name": "web-project",
+  "version": "1.0.0",
+  "description": "A web project that allows users to input a number and receive an output based on a specified equation.",
+  "main": "src/scripts/app.js",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "keywords": [
+    "web",
+    "project",
+    "input",
+    "output",
+    "equation"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

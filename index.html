@@ -1,0 +1,66 @@
+<!--
+
+            _     _
+           (')-=-(')
+         __(   "   )__
+        / _/'-----'\_ \
+     ___\\ \\     // //___
+     >____)/_\---/_\(____<
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equation Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculate Minutes</h1>
+        <p>Enter a number to calculate m(minutes):</p>
+        <form id="calcForm">
+            <input type="number" id="userInput" placeholder="Enter a number" required>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('calcForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const userInput = parseFloat(document.getElementById('userInput').value);
+            if (!isNaN(userInput)) {
+                const result = (userInput / 4) * 6;
+                document.getElementById('result').textContent = `Result: ${result} minutes`;
+            } else {
+                document.getElementById('result').textContent = 'Please enter a valid number.';
+            }
+        });
+    </script>
+</body>
+</html>
